@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Decision Compass</title>
+    <meta name="description"
+        content="Frequently asked questions about Decision Compass tools, calculations, privacy, and how to get the best results.">
+    <meta name="keywords" content="FAQ, help, decision compass, career, tech comparison">
+    <meta name="author" content="Decision Compass Team">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+    <div id="pageLoader" aria-live="polite" aria-busy="true">
+        <div class="loader-spinner" aria-hidden="true"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dc sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-dc" href="index.html">
+                <i class="bi bi-compass-fill text-primary" aria-hidden="true"></i> Decision Compass
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tools</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="career.html"><i class="bi bi-briefcase me-2"></i>Career Matcher</a></li>
+                            <li><a class="dropdown-item" href="tech.html"><i class="bi bi-phone me-2"></i>Tech Comparison</a></li>
+                            <li><a class="dropdown-item" href="hobby.html"><i class="bi bi-palette me-2"></i>Hobby Finder</a></li>
+                            <li><a class="dropdown-item" href="tools.html"><i class="bi bi-sliders me-2"></i>Decision Tool</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                            <li><a class="dropdown-item" href="tips.html">Decision Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" id="themeToggle" class="btn" aria-label="Switch theme"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-banner">
+            <div class="container text-center reveal">
+                <h1 class="display-5 fw-bold mb-2">Frequently Asked Questions</h1>
+                <p class="text-muted col-lg-8 mx-auto">Quick answers about how Decision Compass works.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container col-lg-8">
+                <label for="faqSearch" class="form-label fw-semibold">Search FAQs</label>
+                <input type="search" id="faqSearch" class="form-control mb-4" placeholder="Type a keyword...">
+
+                <div class="alert alert-info" role="status">
+                    <i class="bi bi-info-circle me-2"></i> All tools are free and run entirely in your browser — no account needed.
+                </div>
+
+                <div class="accordion faq-list" id="faqAccordion">
+                    <div class="accordion-item faq-item border mb-2 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                Is Decision Compass free to use?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">Yes. Every tool on the site is completely free with no sign-up required.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item border mb-2 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                How does the Career Matcher calculate results?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">Your answers add points to careers based on interest type, work style, strengths, and lifestyle goals. The top three matches show percentage scores based on total points.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item border mb-2 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Can I compare more than two devices?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">The Tech Comparison tool compares two devices at a time. After viewing results, you can immediately select two new devices without refreshing the page.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item border mb-2 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                How does the weighted Decision Tool work?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">You rate each option with stars and set priority weights for each criterion. JavaScript multiplies ratings by weights and shows the winner with a confidence level.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item border mb-2 rounded">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                Do you store my personal data?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">Tool inputs are processed locally in your browser. Only device favorites are saved in your browser's local storage if you use that feature on the Tech page.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center mt-5 text-muted">Still have questions? <a href="contact.html">Contact us</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <p class="footer-brand mb-2"><i class="bi bi-compass-fill text-primary"></i> Decision Compass</p>
+                    <p class="text-muted small">A smart platform for career matching, tech comparison, hobby discovery, and weighted decisions.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 class="h6 fw-bold">Tools</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="tech.html">Tech</a></li>
+                        <li><a href="hobby.html">Hobby</a></li>
+                        <li><a href="tools.html">Decision Tool</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 class="h6 fw-bold">Company</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h6 fw-bold">Resources</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="tips.html">Decision Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center text-muted small mb-0">© 2026 Decision Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

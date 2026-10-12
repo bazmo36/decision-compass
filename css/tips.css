@@ -1,0 +1,88 @@
+.tips-hero {
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.14), transparent 35%),
+        var(--surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow);
+}
+
+.tips-title {
+    margin-bottom: var(--space-md);
+}
+
+.tips-intro {
+    max-width: 58rem;
+    margin: 0 auto var(--space-lg);
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.random-section {
+    padding: var(--space-xl) 0;
+}
+
+.random-section .container {
+    text-align: center;
+}
+
+.random-section .row {
+    justify-content: center;
+}
+
+.random-section .card {
+    text-align: left;
+}
+
+.random-section .card .card-body {
+    min-height: 210px;
+}
+
+.random-section .card h5 {
+    margin-top: 0;
+}
+
+.tip-card {
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: var(--ease);
+}
+
+.tip-card:hover {
+    transform: translateY(-3px);
+}
+
+.tip-card .card-body {
+    min-height: 210px;
+}
+
+.tip-card .badge {
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.tip-action {
+    padding: var(--space-sm) 0;
+}
+
+.tip-action a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tip-action a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .tips-hero {
+        padding: var(--space-lg);
+    }
+
+    .random-section .container {
+        padding: 0 var(--space-md);
+    }
+}

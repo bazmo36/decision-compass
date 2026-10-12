@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Decision Compass</title>
+    <meta name="description"
+        content="Articles and insights on decision-making, career planning, tech choices, and building better habits from Decision Compass.">
+    <meta name="keywords" content="blog, decision making, career tips, tech guides, life choices">
+    <meta name="author" content="Decision Compass Team">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+    <div id="pageLoader" aria-live="polite" aria-busy="true">
+        <div class="loader-spinner" aria-hidden="true"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dc sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-dc" href="index.html">
+                <i class="bi bi-compass-fill text-primary" aria-hidden="true"></i> Decision Compass
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tools</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="career.html"><i class="bi bi-briefcase me-2"></i>Career Matcher</a></li>
+                            <li><a class="dropdown-item" href="tech.html"><i class="bi bi-phone me-2"></i>Tech Comparison</a></li>
+                            <li><a class="dropdown-item" href="hobby.html"><i class="bi bi-palette me-2"></i>Hobby Finder</a></li>
+                            <li><a class="dropdown-item" href="tools.html"><i class="bi bi-sliders me-2"></i>Decision Tool</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                            <li><a class="dropdown-item" href="tips.html">Decision Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" id="themeToggle" class="btn" aria-label="Switch theme"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-banner">
+            <div class="container text-center reveal">
+                <h1 class="display-5 fw-bold mb-2">Decision Compass Blog</h1>
+                <p class="text-muted col-lg-8 mx-auto mb-0">Practical guides for smarter career, tech, and life choices.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <article class="card h-100 border-0 shadow-sm blog-card">
+                            <div class="card-body">
+                                <span class="badge text-bg-primary mb-2">Career</span>
+                                <h2 class="h5 card-title">How to Choose a Career Path Without Overthinking</h2>
+                                <p class="blog-excerpt-short text-muted small">Start with your interests and work style, then narrow options with a scoring system instead of endless lists.</p>
+                                <a href="blog/career-path.html" class="btn btn-sm blog-read-more">Read more</a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                <i class="bi bi-calendar3 me-1"></i> March 2026
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <article class="card h-100 border-0 shadow-sm blog-card">
+                            <div class="card-body">
+                                <span class="badge text-bg-success mb-2">Tech</span>
+                                <h2 class="h5 card-title">Buying a Laptop: Specs That Actually Matter</h2>
+                                <p class="blog-excerpt-short text-muted small">RAM, battery life, and display quality often beat raw processor numbers for everyday students and professionals.</p>
+                                <a href="blog/laptop-specs.html" class="btn btn-sm blog-read-more">Read more</a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                <i class="bi bi-calendar3 me-1"></i> February 2026
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <article class="card h-100 border-0 shadow-sm blog-card">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning text-dark mb-2">Hobbies</span>
+                                <h2 class="h5 card-title">Finding a Hobby That Fits Your Schedule</h2>
+                                <p class="blog-excerpt-short text-muted small">Match hobbies to your time, budget, and environment before committing to expensive gear or classes.</p>
+                                <a href="blog/hobby-schedule.html" class="btn btn-sm blog-read-more">Read more</a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                <i class="bi bi-calendar3 me-1"></i> January 2026
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <article class="card h-100 border-0 shadow-sm blog-card">
+                            <div class="card-body">
+                                <span class="badge text-bg-info text-dark mb-2">Decisions</span>
+                                <h2 class="h5 card-title">Weighted Scoring: A Simple Framework for Hard Choices</h2>
+                                <p class="blog-excerpt-short text-muted small">Rate options against criteria that matter to you, then multiply by priority weights for a clear winner.</p>
+                                <a href="blog/weighted-scoring.html" class="btn btn-sm blog-read-more">Read more</a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                <i class="bi bi-calendar3 me-1"></i> December 2025
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <article class="card h-100 border-0 shadow-sm blog-card">
+                            <div class="card-body">
+                                <span class="badge text-bg-secondary mb-2">Mindset</span>
+                                <h2 class="h5 card-title">Why Good Decisions Beat Perfect Ones</h2>
+                                <p class="blog-excerpt-short text-muted small">Perfectionism delays action. A good-enough decision with clear reasoning beats months of paralysis.</p>
+                                <a href="blog/good-decisions.html" class="btn btn-sm blog-read-more">Read more</a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                <i class="bi bi-calendar3 me-1"></i> November 2025
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <article class="card h-100 border-0 shadow-sm blog-card">
+                            <div class="card-body">
+                                <span class="badge text-bg-danger mb-2">Productivity</span>
+                                <h2 class="h5 card-title">Reduce Decision Fatigue in Daily Life</h2>
+                                <p class="blog-excerpt-short text-muted small">Automate small choices with routines so you save mental energy for decisions that truly matter.</p>
+                                <a href="blog/decision-fatigue.html" class="btn btn-sm blog-read-more">Read more</a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                <i class="bi bi-calendar3 me-1"></i> October 2025
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <p class="footer-brand mb-2"><i class="bi bi-compass-fill text-primary"></i> Decision Compass</p>
+                    <p class="text-muted small">A smart platform for career matching, tech comparison, hobby discovery, and weighted decisions.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 class="h6 fw-bold">Tools</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="tech.html">Tech</a></li>
+                        <li><a href="hobby.html">Hobby</a></li>
+                        <li><a href="tools.html">Decision Tool</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 class="h6 fw-bold">Company</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h6 fw-bold">Resources</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="tips.html">Decision Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center text-muted small mb-0">© 2026 Decision Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

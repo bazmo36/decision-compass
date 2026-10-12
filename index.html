@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Compass — Smart Career, Tech & Life Choices</title>
+    <meta name="description"
+        content="Decision Compass helps you match careers, compare tech devices, discover hobbies, and make weighted decisions with confidence.">
+    <meta name="keywords" content="decision making, career matcher, tech comparison, hobbies, life choices">
+    <meta name="author" content="Decision Compass Team">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+    <div id="pageLoader" aria-live="polite" aria-busy="true">
+        <div class="loader-spinner" aria-hidden="true"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dc sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-dc" href="index.html">
+                <i class="bi bi-compass-fill text-primary" aria-hidden="true"></i> Decision Compass
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tools</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="career.html"><i class="bi bi-briefcase me-2"></i>Career Matcher</a></li>
+                            <li><a class="dropdown-item" href="tech.html"><i class="bi bi-phone me-2"></i>Tech Comparison</a></li>
+                            <li><a class="dropdown-item" href="hobby.html"><i class="bi bi-palette me-2"></i>Hobby Finder</a></li>
+                            <li><a class="dropdown-item" href="tools.html"><i class="bi bi-sliders me-2"></i>Decision Tool</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                            <li><a class="dropdown-item" href="tips.html">Decision Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" id="themeToggle" class="btn" aria-label="Switch theme"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-premium text-center text-lg-start">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7 reveal hero-copy">
+                        <p class="hero-eyebrow badge rounded-pill text-bg-success">Smart decision platform</p>
+                        <h1 class="display-4 fw-bold hero-title">Make Smarter Decisions with <span class="text-gradient">Confidence</span></h1>
+                        <p class="lead opacity-75 hero-lead">Stop guessing. Use intelligent tools to compare technology, explore careers, discover hobbies, and weigh life choices with data-backed clarity.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start hero-actions">
+                            <a href="tech.html" class="btn btn-outline-light btn-lg px-4">Explore Tech</a>
+                            <button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#welcomeModal">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 reveal">
+                        <div id="heroCarousel" class="carousel slide carousel-fade glass-card p-2" data-bs-ride="carousel"
+                            aria-label="Featured tools carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Career"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Tech"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Hobbies"></button>
+                            </div>
+                            <div class="carousel-inner rounded-3 overflow-hidden">
+                                <div class="carousel-item active">
+                                    <img src="images/Career.png" class="d-block w-100" alt="Career planning illustration" height="280" style="object-fit:cover">
+                                    <div class="carousel-caption carousel-caption-dc d-none d-md-block">
+                                        <h2 class="h5 mb-1">Career Matcher</h2>
+                                        <p class="small mb-0">Find paths aligned with your strengths.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Modern-laptop-on-desk.png" class="d-block w-100" alt="Laptop on desk for tech comparison" height="280" style="object-fit:cover">
+                                    <div class="carousel-caption carousel-caption-dc d-none d-md-block">
+                                        <h2 class="h5 mb-1">Tech Comparison</h2>
+                                        <p class="small mb-0">Compare phones and laptops side by side.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/hobbies.png" class="d-block w-100" alt="Hobbies and creative activities" height="280" style="object-fit:cover">
+                                    <div class="carousel-caption carousel-caption-dc d-none d-md-block">
+                                        <h2 class="h5 mb-1">Hobby Finder</h2>
+                                        <p class="small mb-0">Discover hobbies that fit your lifestyle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 section-muted" aria-labelledby="statsHeading">
+            <div class="container">
+                <h2 id="statsHeading" class="visually-hidden">Platform statistics</h2>
+                <div class="row g-4 text-center reveal">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card h-100">
+                            <p class="stat-value mb-0">4+</p>
+                            <p class="text-muted small mb-0">Smart tools</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card h-100">
+                            <p class="stat-value mb-0">40+</p>
+                            <p class="text-muted small mb-0">Devices to compare</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card h-100">
+                            <p class="stat-value mb-0">10+</p>
+                            <p class="text-muted small mb-0">Career paths</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card h-100">
+                            <p class="stat-value mb-0">100%</p>
+                            <p class="text-muted small mb-0">Free to use</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" aria-labelledby="trustHeading">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 id="trustHeading" class="fw-bold">Why Decision Compass?</h2>
+                    <p class="text-muted col-lg-8 mx-auto">A premium experience built for students, professionals, and anyone facing important choices.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 reveal">
+                        <div class="glass-card p-4 h-100 text-center">
+                            <i class="bi bi-lightning-charge-fill fs-1 text-primary" aria-hidden="true"></i>
+                            <h3 class="h5 mt-3">Smart Algorithms</h3>
+                            <p class="text-muted small mb-0">Logic-based scoring gives clear, explainable results—not random suggestions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <div class="glass-card p-4 h-100 text-center">
+                            <i class="bi bi-bar-chart-fill fs-1 text-primary" aria-hidden="true"></i>
+                            <h3 class="h5 mt-3">Data-Driven</h3>
+                            <p class="text-muted small mb-0">Weighted calculations and side-by-side comparisons help you decide objectively.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <div class="glass-card p-4 h-100 text-center">
+                            <i class="bi bi-person-check-fill fs-1 text-primary" aria-hidden="true"></i>
+                            <h3 class="h5 mt-3">Personalized</h3>
+                            <p class="text-muted small mb-0">Every recommendation adapts to your preferences, budget, and lifestyle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 section-muted how-it-works" id="how-it-works" aria-labelledby="howHeading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="howHeading" class="section-title fw-bold">How It Works</h2>
+                    <p class="section-subtitle">Three simple steps to clarity.</p>
+                </div>
+                <div class="stepper-wrapper reveal">
+                    <div class="stepper-line" aria-hidden="true"></div>
+                    <div class="step">
+                        <div class="step-icon"><span class="step-number">1</span><div class="step-dot"></div></div>
+                        <div class="step-text"><h3>Select a Tool</h3><p>Career, tech, hobby, or weighted decision.</p></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><span class="step-number">2</span><div class="step-dot"></div></div>
+                        <div class="step-text"><h3>Share Preferences</h3><p>Tell us what matters most to you.</p></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><span class="step-number">3</span><div class="step-dot"></div></div>
+                        <div class="step-text"><h3>Review Results</h3><p>Get scores, rankings, and clear recommendations.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 features home-tools-section" aria-labelledby="toolsHeading">
+            <div class="container">
+                <h2 id="toolsHeading" class="text-center fw-bold mb-5 reveal">Our Tools</h2>
+                <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-xl-4 tools-showcase">
+                    <div class="col reveal">
+                        <article class="card h-100 border-0 shadow-sm feature-card tool-showcase-card">
+                            <div class="feature-media"><img src="images/Career.png" alt="Career matcher tool preview"></div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-mortarboard text-primary"></i> Career Matcher</h3>
+                                <p class="card-text text-muted small">Discover careers aligned with your interests and work style.</p>
+                                <a href="career.html" class="stretched-link fw-semibold">Try now →</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col reveal">
+                        <article class="card h-100 border-0 shadow-sm feature-card tool-showcase-card">
+                            <div class="feature-media"><img src="images/Modern-laptop-on-desk.png" alt="Tech comparison tool preview"></div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-laptop text-primary"></i> Tech Comparison</h3>
+                                <p class="card-text text-muted small">Filter, sort, and compare real device specifications.</p>
+                                <a href="tech.html" class="stretched-link fw-semibold">Compare →</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col reveal">
+                        <article class="card h-100 border-0 shadow-sm feature-card tool-showcase-card">
+                            <div class="feature-media"><img src="images/hobbies.png" alt="Hobby finder tool preview"></div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-palette text-primary"></i> Hobby Finder</h3>
+                                <p class="card-text text-muted small">Find hobbies tailored to your time, budget, and personality.</p>
+                                <a href="hobby.html" class="stretched-link fw-semibold">Find hobby →</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col reveal">
+                        <article class="card h-100 border-0 shadow-sm feature-card tool-showcase-card">
+                            <div class="feature-media"><img src="images/Decision.png" alt="Weighted decision tool preview"></div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-sliders text-primary"></i> Decision Tool</h3>
+                                <p class="card-text text-muted small">Rate options with weighted criteria for a clear winner.</p>
+                                <a href="tools.html" class="stretched-link fw-semibold">Decide →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 section-muted" aria-labelledby="testimonialsHeading">
+            <div class="container">
+                <h2 id="testimonialsHeading" class="text-center fw-bold mb-5 reveal">What Users Say</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 reveal">
+                        <blockquote class="card h-100 border-0 shadow-sm p-4 testimonial-card">
+                            <div class="testimonial-stars mb-3" aria-label="5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="mb-3">"The tech comparison saved me hours of research. Clear winner on specs and price."</p>
+                            <footer class="text-muted small"><strong>Sara M.</strong> — Student</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <blockquote class="card h-100 border-0 shadow-sm p-4 testimonial-card">
+                            <div class="testimonial-stars mb-3" aria-label="5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="mb-3">"Career matcher gave me three paths I had never considered. Super helpful for planning."</p>
+                            <footer class="text-muted small"><strong>Ahmed K.</strong> — Graduate</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <blockquote class="card h-100 border-0 shadow-sm p-4 testimonial-card">
+                            <div class="testimonial-stars mb-3" aria-label="5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="mb-3">"The weighted decision tool made choosing between job offers feel logical, not stressful."</p>
+                            <footer class="text-muted small"><strong>Lina R.</strong> — Professional</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <p class="text-center mt-4"><a href="reviews.html" class="btn btn-outline-primary">Read more reviews</a></p>
+            </div>
+        </section>
+
+        <section class="py-5 cta text-white text-center" aria-labelledby="ctaHeading">
+            <div class="container reveal">
+                <h2 id="ctaHeading" class="fw-bold mb-2">Ready to decide with confidence?</h2>
+                <p class="opacity-75 mb-4">Join thousands using Decision Compass for smarter life choices.</p>
+                <a href="tools.html" class="btn btn-gradient btn-lg me-2">Open Decision Tool</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <p class="footer-brand mb-2"><i class="bi bi-compass-fill text-primary"></i> Decision Compass</p>
+                    <p class="text-muted small">A smart platform for career matching, tech comparison, hobby discovery, and weighted decisions.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 class="h6 fw-bold">Tools</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="tech.html">Tech</a></li>
+                        <li><a href="hobby.html">Hobby</a></li>
+                        <li><a href="tools.html">Decision Tool</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 class="h6 fw-bold">Company</h3>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h6 fw-bold">Stay informed</h3>
+                    <div class="alert alert-success py-2 small mb-0" role="status">
+                        <i class="bi bi-check-circle me-1"></i> All tools are free — no account required.
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center text-muted small mb-0">© 2026 Decision Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card border-0">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title h5" id="welcomeModalLabel">Welcome to Decision Compass</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We combine career scoring, device comparison, hobby matching, and weighted decision logic in one modern platform.</p>
+                    <ul class="small text-muted">
+                        <li>Real JavaScript calculations on every tool</li>
+                        <li>Fully responsive on mobile, tablet, and desktop</li>
+                        <li>Accessible, keyboard-friendly interface</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="about.html" class="btn btn-gradient">About the project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

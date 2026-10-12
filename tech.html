@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Comparison | Decision Compass</title>
+    <meta name="description" content="Compare smartphones and laptops with filters, sorting, and side-by-side analysis.">
+    <meta name="keywords" content="tech, phones, laptops, comparison, devices">
+    <meta name="author" content="Decision Compass Team">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/comparison.css">
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+
+    <div id="pageLoader" aria-live="polite" aria-busy="true">
+        <div class="loader-spinner" aria-hidden="true"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dc sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-dc" href="index.html">
+                <i class="bi bi-compass-fill text-primary" aria-hidden="true"></i> Decision Compass
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tools</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="career.html"><i class="bi bi-briefcase me-2"></i>Career Matcher</a></li>
+                            <li><a class="dropdown-item" href="tech.html"><i class="bi bi-phone me-2"></i>Tech Comparison</a></li>
+                            <li><a class="dropdown-item" href="hobby.html"><i class="bi bi-palette me-2"></i>Hobby Finder</a></li>
+                            <li><a class="dropdown-item" href="tools.html"><i class="bi bi-sliders me-2"></i>Decision Tool</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                            <li><a class="dropdown-item" href="tips.html">Decision Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" id="themeToggle" class="btn" aria-label="Switch theme"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <section class="content container-fluid">
+        <h2>Compare Tech Devices</h2>
+
+        <div class="page-intro">
+            <p>
+                Analyze top-tier smartphones and laptops. Choose your currency, filter by your favorite brands,
+                and select two items to see our expert verdict.
+            </p>
+        </div>
+
+        <div class="controls-row">
+            <div class="control-group">
+                <label>Category:</label>
+                <select id="category" onchange="loadDevices()">
+                    <option value="phones">Smartphones</option>
+                    <option value="laptops">Laptops</option>
+                </select>
+            </div>
+
+            <div class="currency-toggle">
+                <span>Currency:</span>
+                <button id="btnUSD" class="active" onclick="changeCurrency('USD')">USD</button>
+                <button id="btnBHD" onclick="changeCurrency('BHD')">BHD</button>
+            </div>
+        </div>
+
+        <div class="layout">
+            <aside class="filters">
+                <h3>Filter Options</h3>
+
+                <div class="filter-section">
+                    <p><b>Price Range</b></p>
+                    <label><input type="checkbox" class="price-filter" value="low" onchange="applyFilters()"> <span
+                            id="labelLow">Less than 500 $</span></label>
+                    <label><input type="checkbox" class="price-filter" value="mid" onchange="applyFilters()"> <span
+                            id="labelMid">500 - 1000 $</span></label>
+                    <label><input type="checkbox" class="price-filter" value="high" onchange="applyFilters()"> <span
+                            id="labelHigh">More than 1000 $</span></label>
+                </div>
+
+                <div class="filter-section">
+                    <p><b>Brands</b></p>
+                    <div class="brand-grid">
+                        <label><input type="checkbox" class="brand-filter" value="Apple" onchange="applyFilters()">
+                            Apple</label>
+                        <label><input type="checkbox" class="brand-filter" value="Samsung" onchange="applyFilters()">
+                            Samsung</label>
+                        <label><input type="checkbox" class="brand-filter" value="Google" onchange="applyFilters()">
+                            Google</label>
+                        <label><input type="checkbox" class="brand-filter" value="Dell" onchange="applyFilters()">
+                            Dell</label>
+                        <label><input type="checkbox" class="brand-filter" value="HP" onchange="applyFilters()">
+                            HP</label>
+                        <label><input type="checkbox" class="brand-filter" value="Lenovo" onchange="applyFilters()">
+                            Lenovo</label>
+                        <label><input type="checkbox" class="brand-filter" value="Asus" onchange="applyFilters()">
+                            Asus</label>
+                        <label><input type="checkbox" class="brand-filter" value="Xiaomi" onchange="applyFilters()">
+                            Xiaomi</label>
+                        <label><input type="checkbox" class="brand-filter" value="Huawei" onchange="applyFilters()">
+                            Huawei</label>
+                        <label><input type="checkbox" class="brand-filter" value="OnePlus" onchange="applyFilters()">
+                            OnePlus</label>
+                        <label><input type="checkbox" class="brand-filter" value="Oppo" onchange="applyFilters()">
+                            Oppo</label>
+                        <label><input type="checkbox" class="brand-filter" value="Realme" onchange="applyFilters()">
+                            Realme</label>
+                        <label><input type="checkbox" class="brand-filter" value="MSI" onchange="applyFilters()">
+                            MSI</label>
+                        <label><input type="checkbox" class="brand-filter" value="Razer" onchange="applyFilters()">
+                            Razer</label>
+                        <label><input type="checkbox" class="brand-filter" value="Sony" onchange="applyFilters()">
+                            Sony</label>
+                        <label><input type="checkbox" class="brand-filter" value="Microsoft" onchange="applyFilters()">
+                            Microsoft</label>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="main">
+                <div id="techAlert" class="tech-limit-alert d-none" role="alert">
+                    <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
+                    <span>You can compare a maximum of 2 devices at the same time.</span>
+                    <button type="button" class="tech-alert-close" onclick="dismissTechAlert()" aria-label="Dismiss alert">&times;</button>
+                </div>
+
+                <div class="top-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Search by name..." onkeyup="applyFilters()">
+                    <div class="action-buttons">
+                        <select id="sortOption" onchange="applyFilters()">
+                            <option value="default">Sort By</option>
+                            <option value="priceLow">Price: Low to High</option>
+                            <option value="priceHigh">Price: High to Low</option>
+                            <option value="performance">Highest Performance</option>
+                        </select>
+                        <button type="button" class="fav-btn" onclick="toggleFavorites()" aria-pressed="false">
+                            <i class="bi bi-heart-fill" aria-hidden="true"></i> View Favorites
+                        </button>
+                    </div>
+                </div>
+
+                <div id="deviceGrid" class="device-grid"></div>
+
+                <div class="compare-actions">
+                    <p id="selectionCount" class="mb-0">0 of 2 devices selected</p>
+                    <button type="button" id="compareBtn" class="compare-select" onclick="compareSelected()" disabled>Compare Selected</button>
+                </div>
+
+                <div id="comparisonResult" class="comparison-result compare-result-panel d-none" aria-live="polite">
+                    <h3 class="compare-result-heading h5 fw-bold mb-3">Side-by-Side Comparison</h3>
+                    <div class="table-responsive">
+                        <table id="compareTable" class="compare-table"></table>
+                    </div>
+                    <div id="winner" class="compare-verdict" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="text-center text-muted small mb-0 py-3">© 2026 Decision Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tech.js"></script>
+</body>
+
+</html>
